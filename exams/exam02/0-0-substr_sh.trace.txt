@@ -1,0 +1,56 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r2p15.42.fr
+Darwin 14.5.0 x86_64
+$> date
+Fri Dec  4 15:18:05 CET 2015
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.0.0 (clang-700.1.76)
+Target: x86_64-apple-darwin14.5.0
+Thread model: posix
+$> clang --version
+Apple LLVM version 7.0.0 (clang-700.1.76)
+Target: x86_64-apple-darwin14.5.0
+Thread model: posix
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2015/piscine-c-formation-exam02/exam_20151204/acresap
+
+= Git history ==================================================================
+$> git -C /var/folders/tt/f7nh8l0x3cbdvkhj5d1hm2wm0000gp/T/tmpTugMFU/user log --pretty='%H - %an, %ad : %s'
+9aa73d4e9a833975547307d4812841f19e3ae01f - Exam 42, Fri Dec 4 15:16:57 2015 +0100 : exam02, exo1
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/tt/f7nh8l0x3cbdvkhj5d1hm2wm0000gp/T/tmpTugMFU/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  202 Dec  4 15:18 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Dec  4 15:18 substr_sh
+
+/var/folders/tt/f7nh8l0x3cbdvkhj5d1hm2wm0000gp/T/tmpTugMFU/user/substr_sh:
+total 8
+-rw-r--r--  1 deepthought  deepthought  56 Dec  4 15:18 substr.sh
+ 
+= substr_sh ====================================================================
+Testing with FT_LINE='Les patrons du staff ne sentent pas toujours tres bon.'
+$> diff -U 3 user_output ref_output | cat -e
+
+Diff OK :D
+Testing with FT_LINE='zaz est grand, zaz est beau, zaz sent bon le sable chaud, mais zaz n'est pas tres malin'
+$> diff -U 3 user_output ref_output | cat -e
+
+Diff OK :D
+Testing with FT_LINE='sifflet en travaillant'
+$> diff -U 3 user_output ref_output | cat -e
+--- user_output	2015-12-04 15:18:05.000000000 +0100$
++++ ref_output	2015-12-04 15:18:05.000000000 +0100$
+@@ -1 +1 @@$
+-sifflet en travaillant$
++et en travaillant$
+
+Diff KO :(
+KO
+Grade: 0
+
+= Final grade: 0 ===============================================================

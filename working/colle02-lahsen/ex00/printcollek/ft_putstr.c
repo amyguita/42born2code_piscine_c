@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 12:01:09 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/08 22:46:47 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/08 10:24:20 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/08 16:01:51 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write(1, &c, 1);
+	int index;
+
+	index = 0;
+	while (str[index] != '\0')
+	{
+		ft_putchar(str[index]);
+		index++;
+	}
 }

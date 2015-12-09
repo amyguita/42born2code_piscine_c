@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/08 09:30:49 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/08 11:22:20 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/08 09:41:22 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/08 16:01:25 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putresult1(int k, int x, int y);
+#include <unistd.h>
 
-int		main(void)
+void	ft_putchar(char c)
 {
-	int		r;
-	char	mx;
-	char	my;
-
-	r = 0;
-	mx = 5;
-	my = 3;
-
-	ft_putresult1(r, mx, my);
+	write(1, &c, 1);
 }

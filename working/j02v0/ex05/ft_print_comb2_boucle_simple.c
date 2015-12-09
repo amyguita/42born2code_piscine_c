@@ -1,46 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   myfirstboucle.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/06 16:26:07 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/06 16:26:20 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/08 22:18:10 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/08 23:04:14 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
-void	ft_print_comb2(char c)
+void	ft_putchar(char c)
 {
-	char	n1d1;
-	char	n1d2;
-	char	n2d1;
-	char	n2d2;
+	write(1, &c, 1);
+}
 
-	n1d1 = '0' -1;
-	while (n1d1++ <= '9')
+void	ft_print_comb2(void)
+{
+	int	h;
+	int	i;
+	int	j;
+	int	k;
+
+	h = 0;
+	while (h <= 9)
 	{
-		n1d2 = n1d1 + 1;
-		while (n1d2 <= '8')
+		while (i <= 9)
 		{
-			n2d1 = n1d2 + 1;
-			while (n2d1 <= '9')
+			while (j <= 9)
 			{
-				ft_putchar(n1d1);
-				ft_putchar(n1d2);
-				ft_putchar(n2d1);
-				ft_putchar(n2d2);
-				if (n1d1 != '7')
+				while (k <= 9)
 				{
-					ft_putchar(',');
-					ft_putchar(' ');
+					ft_putchar('k');
+					k = k + 1;
 				}
-				n2d2++;
 			}
-			n2d1++;
 		}
-		n1d2++;
 	}
+}
+
+int	main(void)
+{
+	ft_print_comb2(h, i, j, k);
+	return (0);
 }

@@ -1,0 +1,47 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tlecalve <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2015/12/07 11:43:38 by tlecalve          #+#    #+#              #
+#    Updated: 2015/12/08 20:24:27 by acresap          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+ft_printcollek: ft_printcollek.o main.o ft_putstr.o ft_putchar.o ft_putresult00.o ft_putresult01.o ft_putresult02.o ft_putresult03.o ft_putresult30.o ft_putresult33.o ft_colle-2.o
+	gcc -o printcollek ft_printcollek.o main.o ft_putstr.o ft_putchar.o ft_putresult00.o ft_putresult01.o ft_putresult02.o ft_putresult03.o ft_putresult30.o ft_putresult33.o ft_colle-2.o
+
+ft_printcollek.o: ft_printcollek.c
+	gcc -o ft_printcollek.o -c ft_printcollek.c -Wall -Werror -Wextra
+
+main.o: main.c
+	gcc -o main.o -c main.c -Wall -Werror -Wextra
+
+ft_putstr.o: ft_putstr.c
+	gcc -o ft_putstr.o -c ft_putstr.c -Wall -Werror -Wextra
+
+ft_putchar.o: ft_putchar.c
+	gcc -o ft_putchar.o -c ft_putchar.c -Wall -Werror -Wextra
+
+ft_putresult00.o: ft_putresult00.c
+	gcc -o ft_putresult00.o -c ft_putresult00.c -Wall -Werror -Wextra
+
+ft_putresult01.o: ft_putresult01.c
+	gcc -o ft_putresult01.o -c ft_putresult01.c -Wall -Werror -Wextra
+
+ft_putresult02.o: ft_putresult02.c
+	gcc -o ft_putresult02.o -c ft_putresult02.c -Wall -Werror -Wextra
+
+ft_putresult03.o: ft_putresult03.c
+	gcc -o ft_putresult03.o -c ft_putresult03.c -Wall -Werror -Wextra
+
+ft_putresult30.o: ft_putresult30.c
+	gcc -o ft_putresult30.o -c ft_putresult30.c -Wall -Werror -Wextra
+
+ft_putresult33.o: ft_putresult33.c
+	gcc -o ft_putresult33.o -c ft_putresult33.c -Wall -Werror -Wextra
+
+ft_colle-2.o: ft_colle-2.c
+	gcc -o ft_colle-2.o -c ft_colle-2.c -Wall -Werror -Wextra

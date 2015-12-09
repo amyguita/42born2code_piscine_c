@@ -1,42 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acresap <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/06 12:47:39 by acresap           #+#    #+#             */
-/*   Updated: 2015/12/08 21:28:47 by acresap          ###   ########.fr       */
+/*   Created: 2015/12/06 16:26:07 by acresap           #+#    #+#             */
+/*   Updated: 2015/12/08 22:16:36 by acresap          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_print_comb(char c)
+void	ft_print_comb2(char c)
 {
-	char	d1;
-	char	d2;
-	char	d3;
+	char	n1d1;
+	char	n1d2;
+	char	n2d1;
+	char	n2d2;
 
-	d1 = '0' - 1;
-	while (d1++ <= '9')
+	n1d1 = '0' -1;
+	while (n1d1 <= '9')
 	{
-		d2 = d1 + 1;
-		while (d2 <= '9')
+		n1d2 = n1d1 + 1;
+		while (n1d2 <= '8')
 		{
-			d3 = d2 + 1;
-			while (d3 <= '9')
+			n2d1 = n1d2 + 1;
+			while (n2d1 <= '9')
 			{
-				ft_putchar(d1);
-				ft_putchar(d2);
-				ft_putchar(d3++);
-				if (d1 != '7')
+				ft_putchar(n1d1);
+				ft_putchar(n1d2);
+				ft_putchar(n2d1);
+				ft_putchar(n2d2);
+				if (n1d1 != '7')
 				{
 					ft_putchar(',');
 					ft_putchar(' ');
 				}
+				n2d2++;
 			}
-			d2++;
+			n2d1++;
 		}
+		n1d2++;
 	}
 }
